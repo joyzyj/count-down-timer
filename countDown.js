@@ -1,6 +1,7 @@
 window.count = 0
 window.t = 0
 
+//点击按钮开始倒计时
 function startCount () {
 
   var hour = document.getElementById('hourId').value
@@ -12,10 +13,9 @@ function startCount () {
     return
   }
 
-  if (second == 0 && minute == 0 && hour == 0) {
-    alert ('时间到了～')
-    return
-  }
+
+  if (second == 0 && minute == 0 && hour == 0)
+      return
 
   if (count == 0) {
     document.getElementById('hourId').value = hour
@@ -49,9 +49,19 @@ function startCount () {
 
     t = setTimeout('startCount()',1000)
   }
+
 }
 
+//点击按钮暂停倒计时
 function stopCount () {
   clearTimeout(t)
   count = 0
+}
+
+//点击按钮重置时间为0
+function resetCount () {
+  document.getElementById('hourId').value = 0
+  document.getElementById('minuteId').value = 0
+  document.getElementById('secondId').value = 0
+  return
 }
