@@ -2,7 +2,7 @@ window.count = 0
 window.t = 0
 
 //点击按钮开始倒计时
-function startCount () {
+function startCount (once) {
 
   var hour = document.getElementById('hourId').value
   var minute = document.getElementById('minuteId').value
@@ -13,14 +13,20 @@ function startCount () {
     return
   }
 
-
   if (second == 0 && minute == 0 && hour == 0)
-      return
+    return
 
   if (count == 0) {
-    document.getElementById('hourId').value = hour
-    document.getElementById('minuteId').value = minute
-    document.getElementById('secondId').value = second
+    document.getElementById('hourId').value = addZero (hour)
+    document.getElementById('minuteId').value = addZero (minute)
+    document.getElementById('secondId').value = addZero (second)
+
+    document.getElementById('hourChar').style.fontSize="80px"
+    document.getElementById('hourChar').value = "："
+    document.getElementById('minuteChar').style.fontSize="80px"
+    document.getElementById('minuteChar').value = "："
+    document.getElementById('secondChar').value = " "
+
     count = 1
     t = setTimeout('startCount()',1000)
   }
@@ -43,9 +49,9 @@ function startCount () {
       hour -= 1
     }
 
-    document.getElementById('hourId').value = hour
-    document.getElementById('minuteId').value = minute
-    document.getElementById('secondId').value = second
+    document.getElementById('hourId').value = addZero (hour)
+    document.getElementById('minuteId').value = addZero (minute)
+    document.getElementById('secondId').value = addZero (second)
 
     t = setTimeout('startCount()',1000)
   }
@@ -60,8 +66,14 @@ function stopCount () {
 
 //点击按钮重置时间为0
 function resetCount () {
-  document.getElementById('hourId').value = 0
-  document.getElementById('minuteId').value = 0
-  document.getElementById('secondId').value = 0
+  document.getElementById('hourId').value = '00'
+  document.getElementById('minuteId').value = '00'
+  document.getElementById('secondId').value = '00'
   return
+}
+
+//输出指定位长的数字
+function addZero (num) {
+  var str = '00' + num
+  return str.substring(str.length-2, str.length)
 }

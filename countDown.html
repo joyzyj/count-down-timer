@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>count down</title>
+    <title>count-down-timer</title>
     <link rel="stylesheet" href="countDown.css">
     <link rel='icon' href='zyj.ico' type=image/x-icon>
   </head>
@@ -11,14 +11,20 @@
 
     <div class="m-box">
 
-      <div class="title">
-        倒计时器
+      <div class="title" style="font-weight: 100px">
+        Countdown Timer
       </div>
 
       <div class="timer">
-        <input type="text" id="hourId">&nbsp时&nbsp
-        <input type="text" id="minuteId">&nbsp分&nbsp
-        <input type="text" id="secondId">&nbsp秒&nbsp
+        <input type="text" class="time-text" id="hourId">
+        <input type="text" class="char-text" id="hourChar" value="小时" style="font-size: 30px">
+
+        <input type="text" class="time-text" id="minuteId">
+        <input type="text" class="char-text" id="minuteChar" value="分钟" style="font-size: 30px">
+
+        <input type="text" class="time-text" id="secondId">
+        <input type="text" class="char-text" id="secondChar" value="秒" style="font-size: 30px">
+
       </div>
 
       <div class="start-btn">
