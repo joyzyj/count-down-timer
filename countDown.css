@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  transition: 100ms;
+  font-weight: lighter;
+}
+
+body {
+  background-image: url(bgimg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.m-box {
+  background-color: rgba(1,0,0,0.1);
+  width: 360px;
+  height: 230px;
+  margin: 100px auto;
+  border-radius: 5px;
+ }
+
+.m-box .title {
+  background-color: rgba(1,0,0,0.1);
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  color: #ccc;
+  line-height: 50px;
+}
+
+.m-box .timer input {
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid rgba(1,0,0,0.2);
+  border-radius: 5px;
+  outline: none;
+  box-shadow:1px 1px rgba(1,0,0,0.1);
+}
+
+.m-box .timer input:focus {
+  box-shadow: inset 0 0 4px rgba(1,0,0,0.2);
+}
+
+.m-box .timer {
+  height: 60px;
+  width: 290px;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.m-box .start-btn,
+.m-box .stop-btn {
+  height: 40px;
+  width: 100px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.m-box .start-btn {
+  margin-left: 75px;
+}
+
+.m-box .stop-btn {
+  margin-left: 20px;
+}
+
+.m-box button {
+  height: 30px;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: 0;
+  background-color: rgba(1,0,0,0.1);
+  outline: 0;
+  box-shadow: 1px 1px rgba(1,0,0,0.2);
+}
+
+.m-box button:hover {
+  box-shadow: 1px 1px rgba(1,0,0,0.3);
+}
+
+.m-box button:active {
+  box-shadow: 2px 2px 2px 2px rgba(1,0,0,0.3);
+}

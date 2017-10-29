@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>count down</title>
+    <link rel="stylesheet" href="countDown.css">
+    <link rel='icon' href='zyj.ico' type=image/x-icon>
+  </head>
+
+  <body>
+
+    <div class="m-box">
+
+      <div class="title">
+        倒计时器
+      </div>
+
+      <div class="timer">
+        <input type="text" id="hourId">&nbsp时&nbsp
+        <input type="text" id="minuteId">&nbsp分&nbsp
+        <input type="text" id="secondId">&nbsp秒&nbsp
+      </div>
+
+      <div class="start-btn">
+        <button onclick="startCount()">开始</button>
+      </div>
+
+      <div class="stop-btn">
+        <button onclick="stopCount()">暂停</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="countDown.js"></script>
+  </body>
+</html>
