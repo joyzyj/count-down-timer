@@ -10,16 +10,32 @@ body {
   background-repeat: no-repeat;
 }
 
-.m-box {
+.main-box,
+.roll-box {
   background-color: rgba(1,0,0,0.1);
   width: 1080px;
-  height: 540px;
-  margin: 100px auto;
   border-radius: 5px;
- }
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.m-box .title {
-  color: #bbb;
+.main-box {
+   height: 450px;
+   margin-top: 100px;
+}
+
+.roll-box {
+   height: 40px;
+   font-size: 15px;
+   font-weight: lighter;
+   line-height: 40px;
+   color: rgba(250,250,250,0.5);
+   border-style: none;
+   border-top-style: dotted;
+}
+
+.main-box .title {
+  color: rgba(250,250,250,0.5);
   height: 50px;
   text-align: center;
   font-size: 30px;
@@ -27,7 +43,7 @@ body {
   background-color: rgba(1,0,0,0.1);
 }
 
-.m-box .timer {
+.main-box .timer {
   height: 340px;
   width: 1000px;
   margin: 20px auto;
@@ -35,7 +51,7 @@ body {
   display: inline;
 }
 
-.m-box .timer .time-text {
+.main-box .timer .time-text {
   height: 200px;
   width: 200px;
   outline: none;
@@ -47,15 +63,15 @@ body {
   background: transparent;
 }
 
-.m-box .timer #hourId {
+.main-box .timer #hourId {
   margin-left: 120px;
 }
 
-.m-box .timer input:focus {
+.main-box .timer input:focus {
   box-shadow: inset 0 0 4px rgba(1,0,0,0.2);
 }
 
-.m-box .timer .char-text {
+.main-box .timer .char-text {
   height: 50px;
   width: 80px;
   text-align: center;
@@ -65,9 +81,9 @@ body {
 
 }
 
-.m-box .start-btn,
-.m-box .stop-btn,
-.m-box .reset-btn {
+.main-box .start-btn,
+.main-box .stop-btn,
+.main-box .reset-btn {
   height: 60px;
   width: 200px;
   display: inline-block;
@@ -75,11 +91,11 @@ body {
   margin-left: 90px;
 }
 
-.m-box .start-btn {
+.main-box .start-btn {
   margin-left: 120px;
 }
 
-.m-box button {
+.main-box button {
   height: 60px;
   width: 200px;
   color: #ddd;
@@ -91,10 +107,10 @@ body {
   box-shadow: 1px 1px rgba(1,0,0,0.2);
 }
 
-.m-box button:hover {
+.main-box button:hover {
   box-shadow: 1px 1px rgba(1,0,0,0.3);
 }
 
-.m-box button:active {
+.main-box button:active {
   box-shadow: 1.5px 1.5px 2px 2px rgba(1,0,0,0.3);
 }

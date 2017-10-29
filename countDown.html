@@ -9,22 +9,21 @@
 
   <body>
 
-    <div class="m-box">
+    <div class="main-box">
 
       <div class="title" style="font-weight: 100px">
         Countdown Timer
       </div>
 
       <div class="timer">
-        <input type="text" class="time-text" id="hourId">
+        <input type="text" class="time-text" id="hourId" value="00" style="color: rgba(1,0,0,0.2)" onfocus="setStyle(this.id)">
         <input type="text" class="char-text" id="hourChar" value="小时" style="font-size: 30px">
 
-        <input type="text" class="time-text" id="minuteId">
+        <input type="text" class="time-text" id="minuteId" value="00" style="color: rgba(1,0,0,0.2)" onfocus="setStyle(this.id)">
         <input type="text" class="char-text" id="minuteChar" value="分钟" style="font-size: 30px">
 
-        <input type="text" class="time-text" id="secondId">
+        <input type="text" class="time-text" id="secondId" value="00" style="color: rgba(1,0,0,0.2)" onfocus="setStyle(this.id)">
         <input type="text" class="char-text" id="secondChar" value="秒" style="font-size: 30px">
-
       </div>
 
       <div class="start-btn">
@@ -39,6 +38,12 @@
         <button onclick="resetCount()">重置</button>
       </div>
 
+    </div>
+
+    <div class="roll-box">
+      <marquee scrollAmount=8 width=1080 onmouseover=stop() onmouseout=start()>
+        本来想在这里介绍一下怎么使用这个倒计时器的，但是相信你一定知道怎么用，那我就不啰嗦了。这里空着也浪费，那我就......给您先拜个早年吧！新的一年，大吉大利！
+      </marquee>
     </div>
 
     <script type="text/javascript" src="countDown.js"></script>
